@@ -2,7 +2,7 @@ const  Sequelize  = require("sequelize");
 
 const sequelize = require('../../util/database');
 
-const New_Appointment = sequelize.define('New_Appointment',{
+const Cancel_Appointment = sequelize.define('Cancel_Appointment',{
     Patient_Id:{
         type:Sequelize.INTEGER,
         primaryKey:true,
@@ -27,7 +27,11 @@ const New_Appointment = sequelize.define('New_Appointment',{
     Time:{
         type:Sequelize.TIME,
         allowNull:false
+    },
+    Reason:{
+        type:Sequelize.STRING,
+        allowNull:false
     }
 })
 
-module.exports = New_Appointment;
+module.exports = Cancel_Appointment;
